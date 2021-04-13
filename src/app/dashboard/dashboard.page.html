@@ -1,0 +1,123 @@
+
+
+<ion-content class="ion-padding">
+  <ion-toolbar class="ion-no-border">
+    <ion-buttons slot="start" class="ion-no-padding">
+      <ion-menu-button class="ion-no-padding"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <div class="data-number">
+    <h1>Month Dynamics</h1>
+    <ion-grid>
+      <ion-row class="ion-text-center">
+        <ion-col>
+          <h2 class="green">
+            +$3412
+          </h2>
+          <span>Month Average</span>
+        </ion-col>
+        <ion-col>
+          <h2>
+            +1.4%
+          </h2>
+          <span>View Insights</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div style="display: block;" class="top-chart">
+    <canvas baseChart width="400" height="200"
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+  </div>
+  <hr class="separator">
+  <div>
+    <ion-card class="info-coins ion-no-margin ion-margin-bottom">
+        <ion-card-content>
+          <ion-row>
+            <ion-col size="2" class="ion-no-padding">
+              <img src="assets/img/bitcoin.png">
+            </ion-col>
+            <ion-col size="4" class="ion-no-padding">
+                <h4 class="ion-no-padding">Bitcoin</h4>
+                <span>4.12312 coin</span>
+            </ion-col>
+            <ion-col size="3" class="ion-no-padding ion-no-padding">
+              <div style="display: block;">
+                <canvas baseChart
+                            [datasets]="linedataMiniChart"
+                            [options]="optionsMiniChart"
+                            [chartType]="lineChartType"
+                            [colors]="lineMiniChartColors"
+                            ></canvas>
+              </div>
+            </ion-col>
+            <ion-col size="3" class="ion-no-padding ion-text-right">
+              <span class="percentage green">+7.46%</span>
+              <h4>+$495.06</h4>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+    </ion-card>
+    <ion-card class="info-coins ion-no-margin ion-margin-bottom">
+      <ion-card-content>
+        <ion-row>
+          <ion-col size="2" class="ion-no-padding">
+            <img src="assets/img/ethereum.png">
+          </ion-col>
+          <ion-col size="4" class="ion-no-padding">
+              <h4 class="ion-no-padding">Ethereum</h4>
+              <span>34.12312 coin</span>
+          </ion-col>
+          <ion-col size="3" class="ion-no-padding">
+            <div style="display: block;">
+              <canvas baseChart
+                          [datasets]="linedataMiniChartDown"
+                          [options]="optionsMiniChart"
+                          [chartType]="lineChartType"
+                          [colors]="lineMiniChartColorsDown"
+                          ></canvas>
+            </div>
+          </ion-col>
+          <ion-col size="3" class="ion-no-padding ion-text-right">
+            <span class="percentage red">-1.2%</span>
+            <h4>-$30.06</h4>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="info-coins ion-no-margin ion-margin-bottom">
+      <ion-card-content>
+        <ion-row>
+          <ion-col size="2" class="ion-no-padding">
+            <img src="assets/img/ripple.png">
+          </ion-col>
+          <ion-col size="4" class="ion-no-padding">
+              <h4 class="ion-no-padding">Ripple</h4>
+              <span>3.12312 coin</span>
+          </ion-col>
+          <ion-col size="3" class="ion-no-padding">
+            <div style="display: block;">
+              <canvas baseChart
+                          [datasets]="linedataMiniChart"
+                          [options]="optionsMiniChart"
+                          [chartType]="lineChartType"
+                          [colors]="lineMiniChartColors"
+                          ></canvas>
+            </div>
+          </ion-col>
+          <ion-col size="3" class="ion-no-padding ion-text-right">
+            <span class="percentage green">+2.2%</span>
+            <h4>$180.06</h4>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

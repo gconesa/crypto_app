@@ -1,0 +1,52 @@
+.data-number {
+    h2 {
+        font-weight: bold;
+        font-size: 30px;
+
+    }
+    span {
+        color: #8e94a0;
+    }
+
+    padding-bottom: 30px;
+}
+
+.green {
+    color: #5dcb7c;
+}
+
+.red {
+    color: #ee5873;
+}
+
+.separator {
+    background-color: #edf1ff;
+    margin: 20px 0;
+}
+
+ion-card.info-coins {
+    --background: #eef4fc;
+    box-shadow: none;
+    border-radius: 20px;
+    ion-card-content {
+        padding: 10px !important;
+        img {
+            padding-right: 5px;
+        }
+    }
+    h4 {
+        color: #000;
+        font-size: 1em;
+        font-weight: bold;
+        
+    }
+    
+    span {
+        font-size: 0.8em;
+    }
+
+    .percentage {
+        font-weight: bold;
+    }
+
+}
